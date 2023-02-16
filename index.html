@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Validación de Formulario con Javascript</title>
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet"> 
+</head>
+<body>
+	<main>
+		<h2>Create Account</h2>
+		<form action="" class="formulario" id="formulario">
+			
+			<!-- NOMBRE-->
+			<div class="formulario__grupo" id="grupo__nombre">
+				<label for="nombre" class="formulario__label">Nombre</label>
+				<div class="formulario__grupo-input">
+					<input type="text" class="formulario__input" name="nombre" id="nombre" placeholder="Introducir nombre">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">Rellene este campo</p>
+			</div>
+
+          <!--EMAIL-->
+			<div class="formulario__grupo" id="grupo__correo">
+				<label for="correo" class="formulario__label">Email</label>
+				<div class="formulario__grupo-input">
+					<p class="formulario__input-error">Rellene este campo</p>
+					<input type="email" class="formulario__input" name="correo" id="correo" placeholder="Introducir correo">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">Email inválido</p>
+			</div>
+          
+			<!-- CLAVE-->
+			<div class="formulario__grupo" id="grupo__password">
+				<label for="password" class="formulario__label">Clave</label>
+				<div class="formulario__grupo-input">
+					<p class="formulario__input-error">Rellene este campo</p>
+					<input type="password" class="formulario__input" name="password" id="password" placeholder="Introducir clave" maxlength="8">
+					<i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">No debe tener más de 8 caracteres.</p>
+			</div>
+
+			<!-- CONFIRMAR CLAVE-->
+			<div class="formulario__grupo" id="grupo__password2">
+				<label for="password2" class="formulario__label">Confirme su clave</label>
+				<div class="formulario__grupo-input">
+				<input type="password" class="formulario__input" name="password2" id="password2" placeholder="Confirme su clave">
+			    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+				</div>
+				<p class="formulario__input-error">Las contraseñas no coinciden.</p>
+			</div>
+
+
+			<div class="formulario__mensaje" id="formulario__mensaje">
+				<p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+			</div>
+
+			<div class="formulario__grupo formulario__grupo-btn-enviar">
+				<button type="submit" class="formulario__btn">ENVIAR</button>
+				<p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
+			</div>
+		</form>
+	</main>
+
+	<script src="index.js"></script>
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+</body>
+</html>
